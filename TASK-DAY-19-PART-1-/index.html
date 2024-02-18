@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="bible icon.png" sizes="16x16 24x24 32x32 48x48" />
+	<title>THE BIBLE</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<div id="bible-container">
+		<div id="topBox">
+			<div id="head-container">
+				<h1 id="heading">THE BIBLE -</h1>
+				<h1 id="versionname">World English Bible</h1>
+			</div>
+
+			<nav class="search-container">
+				<label for="html">Book Name</label>
+				<input type="search" list="bookList" name="bookName" id="bookName" class="bookName" value="Genesis" />
+
+				<datalist id="bookList"></datalist>
+
+				<label for="html">Chapter</label>
+				<input type="number" name="chapter" id="chapter" value="1" />
+
+				<label for="html">Verse</label>
+				<input type="number" name="verse" id="verse" value="1" />
+
+				<label for="html">Translation Name</label>
+				<input type="search" list="translationList" name="translationName" id="translationName" value="web" />
+
+				<datalist id="translationList">
+					<option value="BBE"></option>
+					<option value="KJV"></option>
+					<option value="WEB"></option>
+					<option value="WEBBE"></option>
+				</datalist>
+
+				<button type="search" id="searchbtn" onclick="searchFunc()">
+					Search
+				</button>
+			</nav>
+		</div>
+
+		<div id="bottomBox">
+			<div id="contentNav">
+				<button class="verse-decrement" onclick="decrement();">
+					Previous Verse (-)
+				</button>
+				<h1 id="reference">Genesis 1:1</h1>
+				<button class="verse-increment" onclick="increment();">
+					Next Verse (+)
+				</button>
+			</div>
+
+			<div id="verse-container">
+				Enter an input to Search and use (Previous and Next) buttons to
+				navigate between next and previous verses.
+			</div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
